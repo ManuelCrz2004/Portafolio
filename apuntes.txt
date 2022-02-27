@@ -1,0 +1,110 @@
+Archivos de Texto plano: 
+No se le puede añadir nada al Texto
+
+Init inicia el repositorio
+Add inicia el archivo
+commmit envia los ultimos cambio (-m "") para dejar notas
+
+.rtf Es un archivo con codigo 
+.docx Es un archivo binario
+.txt Archivo de texto plano
+
+LINEA DE COMANDOS:
+
+pwd: Show the folder where you are
+ls: files on the folder
+ls -al: show all files (included hidden)
+clear or Ctrl + L: clean consolo
+touch: Create a nex empty files
+cat: show the content of a file on the console
+history: show all commands that was envolved
+!#: repeat a command on the history 
+rm: delate a file
+
+command --help: 
+
+
+CREATE A REPOSITORY:
+git init: start git repository
+git add "file": start the file on git repository
+git status: see git status
+git rm --cached "file": get out of ram status
+git commit -m "explanation": Upload a file to Git
+
+FOLLOW FILE HISTORY: 
+git log "file": Follow the file and all chages to this
+
+Manu@Surf-Frutas MINGW32 ~/protecto1 (master)
+$ git log History.txt
+commit eee369625c426e8c5c0d506ba132f28475a8f01c (HEAD -> master)
+Author: Manuel Cruz <manuelcruzg78@gmail.com>
+Date:   Thu Feb 17 17:22:34 2022 -0600
+
+    Changes to the file. Name and Nationality
+
+ eee369625c426e8c5c0d506ba132f28475a8f01c: Commit tag
+SET-UP GIT:
+
+git config: Open all git configuration
+git config --list: default config and things without info
+git config --list --show-origin: Ubacation where data is storage
+git config --global user.name "name": Set an User name
+git config --globa user.mail "mail": Set an User mail
+
+
+
+BRANCH EXPLANATION: 
+programming is divided into three parts: MASTER, DEVELOP AND HOT-FIX
+
+MASTER: 
+Is the principal branch where it suposed to developall the programms, is the time line of your file or folder.
+DEVELOP:
+Is the place where you upload youw "experimentation", where you try nwe libraries or things like that.
+HOT-FIX:
+This is the place where you upload you bug fixxing, if a big bug appear con you Master branch you moved here and fix all the file on this branch
+Merge:
+Merge is the import or the mix between branch, you can move between those three and take things betweeen past file versions. 
+
+
+HOW TO SEE CHANGES ON GIT:
+git show "file"
+git diff v v 
+
+commit dae3d5b790e75b7812128207d73649c9d7443078 (HEAD -> master)
+Author: Manuel Cruz <manuelcruzg78@gmail.com>
+Date:   Thu Feb 17 20:06:00 2022 -0600
+
+    Correction to first name, added some college information in a new line
+
+diff --git a/History.txt b/History.txt
+index f696b73..1fa4452 100644
+--- a/History.txt   # Two different versions (a and b)
++++ b/History.txt
+@@ -1,5 +1,6 @@    # Places where the info change
+ This is the history of Manuel.
+
+-Mannuel have 17 years old and he was born in Colombia  #Line modified
++Manuel have 17 years old and he was born in Colombia,  #Line with modification
++Manuel is aplying to Cleveland state university at Ohio.   #New line
+
+ Today we will talk about him   # Same final line than original
+\ No newline at end of file
+
+    How to escape form vim.
+    Esc + Shift + ZZ
+
+GIT PARTS
+Staging: temporal space on the RAM (git add)
+Directory: Local Folder where the file is storage
+Repsitory(.git): External folder (git commit or git commit -m)(master)
+
+CMD:
+ checkout, bring some information from the master
+
+    HOW TO CHANGE FILES:
+    git reset (v#) --hard: go back to the version you choose and erease everything betheen the head and selected version
+    git reset(v#) --soft: Leave the head at Staging
+
+    git log --stat: show every single change on the files
+    git checkout v# (file): Bring to Staging the version that you choose.
+    git checkout master (file): bring last commited version
